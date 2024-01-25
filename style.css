@@ -1,0 +1,97 @@
+body{
+    background-image: url(hatterek/hatter3.jpg);
+    font-family: Arial, Helvetica;
+}
+
+main{
+    background-color: white;
+    width: 80%;
+    max-width: 100%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'h h h'
+    'n n n'
+    'a a as'
+    'f f f';
+}
+
+header{
+    grid-area: h;
+    font-size: 4vw;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+article{
+    grid-area: a;
+    padding: 15px;
+    text-align: justify;
+}
+
+h1{
+    border-bottom: 3px solid black;
+}
+
+article img{
+    float: right;
+    width: 200px;
+    padding: 5px;
+    border: solid grey 1px;
+    margin-left: 12px;
+    border-radius: 5%;
+}
+
+aside{
+    grid-area: as;
+}
+
+aside img{
+    size: 100%;
+}
+
+nav{
+    grid-area: n;
+    background-color: green;
+    text-align: center;
+}
+
+nav ul{
+    padding: 0px;
+}
+
+nav li{
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    background-color: limegreen;
+}
+
+footer{
+    grid-area: f;
+    text-align: center;
+    background-color: green;
+}
+
+@media screen  and (max-width: 600px){
+    main{
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'h'
+        'n'
+        'a'
+        'as'
+        'f';
+    }
+}
